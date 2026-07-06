@@ -1,0 +1,36 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<div class="card">
+
+<h1>{{ config.APP_NAME }}</h1>
+
+<h2>{{ config.APP_TITLE }}</h2>
+
+<p>Connecting Sales and Engineering.</p>
+
+<hr>
+
+<table>
+
+<tr>
+<td><strong>Version</strong></td>
+<td>{{ config.VERSION }}</td>
+</tr>
+
+<tr>
+<td><strong>Status</strong></td>
+<td>Healthy</td>
+</tr>
+
+<tr>
+<td><strong>Environment</strong></td>
+<td>Development</td>
+</tr>
+
+</table>
+
+</div>
+
+{% endblock %}
