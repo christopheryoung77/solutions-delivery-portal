@@ -7,6 +7,7 @@ Application Factory
 from flask import Flask
 
 from app.core.config import Config
+from app.core.context import inject_globals
 from app.core.logging import configure_logging
 from app.dashboard import dashboard_bp
 from app.core.health import health_bp
@@ -17,6 +18,8 @@ def create_app():
     app = Flask(__name__)
 
     app.config.from_object(Config)
+
+    app.context_processor(inject_globals)
 
     configure_logging()
 
