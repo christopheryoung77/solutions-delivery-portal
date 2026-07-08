@@ -1,7 +1,17 @@
 #!/bin/bash
 
+cd /opt/sdp/solutions-delivery-portal
+
 source ~/.venvs/atlas/bin/activate
 
-cd /opt/sdp/solutions-delivery-portal
+echo "========================================="
+echo " Atlas Development Environment"
+echo "========================================="
+
+python --version
+
+git branch --show-current
+
+echo
 
 python run.py

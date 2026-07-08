@@ -1,0 +1,160 @@
+/*
+===========================================================
+Atlas Dashboard
+Version : v0.2.0-alpha
+===========================================================
+*/
+
+/* =========================================================
+   Dashboard Header
+========================================================= */
+
+.dashboard-header {
+
+    margin-bottom: 35px;
+
+}
+
+.dashboard-header h1 {
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+
+}
+
+.dashboard-header p {
+
+    color: var(--atlas-text-muted);
+
+    margin: 0;
+
+}
+
+/* =========================================================
+   KPI Cards
+========================================================= */
+
+.kpi-grid .col {
+
+    margin-bottom: 24px;
+
+}
+
+.kpi-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.kpi-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: -40px;
+
+    top: -40px;
+
+    width: 120px;
+
+    height: 120px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 59, 92, .04);
+
+}
+
+/* =========================================================
+   Summary Card
+========================================================= */
+
+.summary-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.summary-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    right: -80px;
+
+    top: -80px;
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.08);
+
+}
+
+/* =========================================================
+   Coming Soon Section
+========================================================= */
+
+.dashboard-placeholder {
+
+    margin-top: 40px;
+
+}
+
+.dashboard-placeholder h3 {
+
+    font-size: 1.2rem;
+
+    margin-bottom: 20px;
+
+}
+
+.placeholder-card {
+
+    background: white;
+
+    border: 2px dashed var(--atlas-border);
+
+    border-radius: var(--card-radius);
+
+    padding: 22px;
+
+    text-align: center;
+
+    color: var(--atlas-text-muted);
+
+    min-height: 145px;
+
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .dashboard-header {
+
+        text-align: center;
+
+    }
+
+    .summary-card {
+
+        text-align: center;
+
+    }
+
+}

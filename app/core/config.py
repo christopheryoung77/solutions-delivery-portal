@@ -1,36 +1,17 @@
-"""
-Project Atlas
-Sprint: 1.1A
+import os
+from dotenv import load_dotenv
 
-Application Configuration
-"""
-
-from pathlib import Path
-import secrets
-
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-
-
-def get_version() -> str:
-    """Read the Atlas version from the VERSION file."""
-    version_file = PROJECT_ROOT / "VERSION"
-
-    if version_file.exists():
-        return version_file.read_text().strip()
-
-    return "0.0.0-dev"
+load_dotenv()
 
 
 class Config:
-    """Base configuration."""
 
-    APP_NAME = "Project Atlas"
-    APP_TITLE = "Solutions Delivery Portal"
+    APP_NAME = os.getenv("APP_NAME", "Atlas")
 
-    VERSION = get_version()
+    APP_TITLE = os.getenv("APP_TITLE", "Project Atlas")
 
-    SECRET_KEY = secrets.token_hex(32)
+    VERSION = os.getenv("VERSION", "0.2.0-alpha")
 
-    DEBUG = True
+    SECRET_KEY = os.getenv("SECRET_KEY", "development")
 
-    TEMPLATES_AUTO_RELOAD = True
+    WORKBOOK_PATH = os.getenv("WORKBOOK_PATH")
