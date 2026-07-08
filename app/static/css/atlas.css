@@ -1,87 +1,293 @@
-:root{
+/*
+===========================================================
+Atlas UI Framework
+Application Layout
+Version : v0.2.0-alpha
+===========================================================
+*/
 
---atlas-blue:#003B5C;
---atlas-light:#F5F7FA;
---atlas-sidebar:#173F5F;
---atlas-card:#FFFFFF;
---atlas-border:#E5E7EB;
+/* =========================================================
+   Design Tokens
+========================================================= */
 
-}
+:root {
 
-body{
+    --atlas-primary: #003B5C;
+    --atlas-primary-light: #005A8C;
 
-background:var(--atlas-light);
+    --atlas-sidebar: #173F5F;
 
-font-family:Segoe UI,Arial,sans-serif;
+    --atlas-background: #F5F7FA;
 
-margin:0;
+    --atlas-card: #FFFFFF;
 
-}
+    --atlas-border: #E5E7EB;
 
-.atlas-navbar{
+    --atlas-text: #1F2937;
 
-background:var(--atlas-blue);
+    --atlas-text-muted: #6B7280;
 
-height:64px;
+    --atlas-success: #16A34A;
 
-}
+    --atlas-warning: #D97706;
 
-.atlas-subtitle{
+    --atlas-danger: #DC2626;
 
-font-size:.9rem;
+    --navbar-height: 64px;
 
-margin-left:10px;
+    --sidebar-width: 250px;
 
-font-weight:300;
+    --page-padding: 30px;
 
-}
+    --card-radius: 14px;
 
-.atlas-sidebar{
-
-background:var(--atlas-sidebar);
-
-min-height:calc(100vh - 64px);
-
-}
-
-.atlas-sidebar .nav-link{
-
-color:white;
-
-padding:14px 24px;
+    --transition-speed: .25s;
 
 }
 
-.atlas-sidebar .nav-link:hover{
+/* =========================================================
+   Global
+========================================================= */
 
-background:rgba(255,255,255,.08);
+html,
+body {
 
-}
-
-.atlas-card{
-
-background:white;
-
-padding:25px;
-
-border-radius:10px;
-
-border:1px solid var(--atlas-border);
-
-box-shadow:0 4px 10px rgba(0,0,0,.05);
+    height: 100%;
 
 }
 
-.atlas-footer{
+body {
 
-background:white;
+    margin: 0;
 
-padding:12px;
+    background: var(--atlas-background);
 
-border-top:1px solid var(--atlas-border);
+    color: var(--atlas-text);
 
-text-align:center;
+    font-family:
 
-margin-top:30px;
+        "Segoe UI",
+
+        Roboto,
+
+        Arial,
+
+        sans-serif;
+
+    font-size: .95rem;
+
+}
+
+/* =========================================================
+   Navbar
+========================================================= */
+
+.atlas-navbar {
+
+    height: var(--navbar-height);
+
+    background: var(--atlas-primary);
+
+    box-shadow: 0 2px 12px rgba(0,0,0,.10);
+
+}
+
+.navbar-brand {
+
+    font-weight: 700;
+
+    font-size: 1.15rem;
+
+}
+
+.atlas-subtitle {
+
+    margin-left: 10px;
+
+    font-weight: 300;
+
+    font-size: .90rem;
+
+    opacity: .85;
+
+}
+
+/* =========================================================
+   Sidebar
+========================================================= */
+
+.atlas-sidebar {
+
+    background: var(--atlas-sidebar);
+
+    min-height: calc(100vh - var(--navbar-height));
+
+    border-right: 1px solid rgba(255,255,255,.05);
+
+}
+
+.atlas-sidebar .nav-link {
+
+    color: white;
+
+    padding: 14px 22px;
+
+    border-radius: 8px;
+
+    margin: 4px 10px;
+
+    transition: all var(--transition-speed);
+
+}
+
+.atlas-sidebar .nav-link i {
+
+    width: 24px;
+
+}
+
+.atlas-sidebar .nav-link:hover {
+
+    background: rgba(255,255,255,.10);
+
+    transform: translateX(3px);
+
+}
+
+.atlas-sidebar .nav-link.active {
+
+    background: rgba(255,255,255,.20);
+
+    border-left: 4px solid white;
+
+    font-weight: 600;
+
+}
+
+/* =========================================================
+   Main Content
+========================================================= */
+
+main {
+
+    padding: var(--page-padding) !important;
+
+    max-width: 1650px;
+
+    max-width: 1650px;
+
+}
+
+.page-title {
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    margin-bottom: 4px;
+
+}
+
+.page-subtitle {
+
+    color: var(--atlas-text-muted);
+
+    margin-bottom: 30px;
+
+}
+
+/* =========================================================
+   Generic Card
+========================================================= */
+
+.atlas-card {
+
+    background: var(--atlas-card);
+
+    border: 1px solid var(--atlas-border);
+
+    border-radius: var(--card-radius);
+
+    box-shadow: 0 4px 14px rgba(0,0,0,.05);
+
+    padding: 24px;
+
+    transition:
+
+        transform var(--transition-speed),
+
+        box-shadow var(--transition-speed);
+
+}
+
+.atlas-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 24px rgba(0,0,0,.10);
+
+}
+
+/* =========================================================
+   Section Headings
+========================================================= */
+
+.section-title {
+
+    font-size: 1.25rem;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+}
+
+/* =========================================================
+   Footer
+========================================================= */
+
+.atlas-footer {
+
+    background: white;
+
+    border-top: 1px solid var(--atlas-border);
+
+    color: var(--atlas-text-muted);
+
+    padding: 14px;
+
+    text-align: center;
+
+    margin-top: 40px;
+
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 992px) {
+
+    main {
+
+        padding: 20px !important;
+
+    }
+
+    .page-title {
+
+        font-size: 1.6rem;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .atlas-sidebar {
+
+        min-height: auto;
+
+    }
 
 }

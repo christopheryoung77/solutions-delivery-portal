@@ -1,0 +1,236 @@
+/*
+===========================================================
+Atlas UI Components
+Version : v0.2.0-alpha
+===========================================================
+*/
+
+/* =========================================================
+   KPI Grid
+========================================================= */
+
+.kpi-grid {
+
+    margin-bottom: 30px;
+
+}
+
+/* =========================================================
+   KPI Card
+========================================================= */
+
+.kpi-card {
+
+    background: var(--atlas-card);
+
+    border: 1px solid var(--atlas-border);
+
+    border-top: 5px solid var(--atlas-primary);
+
+    border-radius: var(--card-radius);
+
+    padding: 24px;
+
+    box-shadow: 0 5px 16px rgba(0,0,0,.06);
+
+    transition: all .25s ease;
+
+    height: 100%;
+
+}
+
+.kpi-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: var(--atlas-primary);
+
+    box-shadow: 0 14px 28px rgba(0,0,0,.12);
+
+}
+
+.kpi-title {
+
+    color: var(--atlas-text-muted);
+
+    font-size: .90rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .05rem;
+
+    margin-bottom: 18px;
+
+}
+
+.kpi-value {
+
+    font-size: 3rem;
+
+    font-weight: 700;
+
+    color: var(--atlas-primary);
+
+    line-height: 1;
+
+}
+
+.kpi-subtitle {
+
+    margin-top: 14px;
+
+    color: var(--atlas-text-muted);
+
+    font-size: .85rem;
+
+}
+
+/* =========================================================
+   Summary Card
+========================================================= */
+
+.summary-card {
+
+    background: linear-gradient(
+        135deg,
+        var(--atlas-primary),
+        var(--atlas-primary-light)
+    );
+
+    color: white;
+
+    border-radius: var(--card-radius);
+
+    padding: 28px 36px;
+
+    margin-top: 30px;
+
+    margin-bottom: 40px;
+
+    min-height: 180px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 22px rgba(0,0,0,.12);
+
+}
+
+.summary-title {
+
+    font-size: 1.15rem;
+
+    font-weight: 500;
+
+    opacity: .90;
+
+    margin-bottom: 10px;
+
+}
+
+.summary-value {
+
+    font-size: 5.5rem;
+
+    font-weight: 700;
+
+    line-height: .95;
+
+    letter-spacing: -2px;
+
+}
+
+/* =========================================================
+   Placeholder Panels
+========================================================= */
+
+.placeholder-card {
+
+    background: white;
+
+    border: 2px dashed var(--atlas-border);
+
+    border-radius: var(--card-radius);
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: var(--atlas-text-muted);
+
+    min-height: 180px;
+
+}
+
+.placeholder-card i {
+
+    font-size: 3rem;
+
+    color: var(--atlas-primary);
+
+    margin-bottom: 18px;
+
+}
+
+/* =========================================================
+   Utility Classes
+========================================================= */
+
+.mt-30 {
+
+    margin-top: 30px;
+
+}
+
+.mb-30 {
+
+    margin-bottom: 30px;
+
+}
+
+.text-muted-small {
+
+    color: var(--atlas-text-muted);
+
+    font-size: .85rem;
+
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .kpi-value {
+
+        font-size: 2.4rem;
+
+    }
+
+    .summary-value {
+
+        font-size: 3rem;
+
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .kpi-card {
+
+        margin-bottom: 20px;
+
+    }
+
+}

@@ -2,34 +2,193 @@
 
 {% block content %}
 
-<div class="card">
+<div class="dashboard-header">
 
-<h1>{{ config.APP_NAME }}</h1>
+    <h1>Executive Dashboard</h1>
 
-<h2>{{ config.APP_TITLE }}</h2>
+    <p>
+        Operational overview generated from the live Atlas workbook.
+    </p>
 
-<p>Connecting Sales and Engineering.</p>
+    <div class="text-muted-small mt-2">
 
-<hr>
+	    <i class="bi bi-clock-history"></i>
 
-<table>
+	    Updated very page refresh
 
-<tr>
-<td><strong>Version</strong></td>
-<td>{{ config.VERSION }}</td>
-</tr>
+</div>
 
-<tr>
-<td><strong>Status</strong></td>
-<td>Healthy</td>
-</tr>
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4 kpi-grid">
 
-<tr>
-<td><strong>Environment</strong></td>
-<td>Development</td>
-</tr>
+    <div class="col">
 
-</table>
+        <div class="kpi-card">
+
+            <div class="kpi-title">
+
+                Technical Assistance
+
+            </div>
+
+            <div class="kpi-value">
+
+                {{ summary.technical_assistance }}
+
+            </div>
+
+            <div class="kpi-subtitle">
+
+                Live Workbook
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col">
+
+        <div class="kpi-card">
+
+            <div class="kpi-title">
+
+                Assessments
+
+            </div>
+
+            <div class="kpi-value">
+
+                {{ summary.assessments }}
+
+            </div>
+
+            <div class="kpi-subtitle">
+
+                Live Workbook
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col">
+
+        <div class="kpi-card">
+
+            <div class="kpi-title">
+
+                Quotes
+
+            </div>
+
+            <div class="kpi-value">
+
+                {{ summary.quotes }}
+
+            </div>
+
+            <div class="kpi-subtitle">
+
+                Live Workbook
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col">
+
+        <div class="kpi-card">
+
+            <div class="kpi-title">
+
+                Tenders
+
+            </div>
+
+            <div class="kpi-value">
+
+                {{ summary.tenders }}
+
+            </div>
+
+            <div class="kpi-subtitle">
+
+                Live Workbook
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="summary-card">
+
+    <div class="summary-title">
+
+        Overall Workload
+
+    </div>
+
+    <div class="summary-value">
+
+        {{ summary.total_requests }}
+
+    </div>
+
+</div>
+
+<div class="dashboard-placeholder">
+
+    <div class="row g-4">
+
+        <div class="col-lg-4">
+
+            <div class="placeholder-card">
+
+                <i class="bi bi-people-fill"></i>
+
+                <strong>Customer Analytics</strong>
+
+                Coming in Sprint 2
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+            <div class="placeholder-card">
+
+                <i class="bi bi-person-workspace"></i>
+
+                <strong>Engineer Workload</strong>
+
+                Coming in Sprint 2
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+            <div class="placeholder-card">
+
+                <i class="bi bi-bar-chart-line-fill"></i>
+
+                <strong>Operational Reporting</strong>
+
+                Coming in Sprint 2
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 

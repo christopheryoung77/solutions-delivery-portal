@@ -2,106 +2,48 @@
 
 {% block content %}
 
-<h2 class="mb-4">
+<h2>Solutions Dashboard</h2>
 
-Dashboard
+<div class="row">
 
-</h2>
+    <div class="kpi-title">
 
-<div class="row g-4">
+<i class="bi bi-tools me-2"></i>
 
-<div class="col-md-3">
+Technical Assistance
 
-<div class="atlas-card">
+</div>
 
-<h6>Total Requests</h6>
+    <div class="kpi-title">
 
-<h1>0</h1>
+<i class="bi bi-clipboard-data me-2"></i>
+
+Assessments
+
+</div>
+
+<div class="kpi-title">
+
+<i class="bi bi-cash-stack me-2"></i>
+
+Quotes
+
+</div>
+
+<div class="kpi-title">
+
+<i class="bi bi-building me-2"></i>
+
+Tenders
 
 </div>
 
 </div>
 
-<div class="col-md-3">
+<hr>
 
-<div class="atlas-card">
+<h2>Total Requests</h2>
 
-<h6>In Progress</h6>
-
-<h1>0</h1>
-
-</div>
-
-</div>
-
-<div class="col-md-3">
-
-<div class="atlas-card">
-
-<h6>Waiting</h6>
-
-<h1>0</h1>
-
-</div>
-
-</div>
-
-<div class="col-md-3">
-
-<div class="atlas-card">
-
-<h6>Completed</h6>
-
-<h1>0</h1>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="row mt-4">
-
-<div class="col-lg-8">
-
-<div class="atlas-card">
-
-<h5>
-
-Recent Activity
-
-</h5>
-
-<p>
-
-No activity yet.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="col-lg-4">
-
-<div class="atlas-card">
-
-<h5>
-
-System Status
-
-</h5>
-
-<p>
-
-🟢 Atlas Healthy
-
-</p>
-
-</div>
-
-</div>
-
-</div>
+<h1>{{ summary.total_requests }}</h1>
 
 {% endblock %}

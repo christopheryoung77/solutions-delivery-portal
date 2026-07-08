@@ -1,4 +1,8 @@
-WORK_TYPES = {
+"""
+Atlas Constants
+"""
+
+WORKSHEETS = {
 
     "technical_assistance": "Technical Assistance",
 
